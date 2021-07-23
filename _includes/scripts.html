@@ -1,0 +1,47 @@
+<script src="{{ "/assets/js/uikit.min.js" | relative_url }}"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/js/uikit.min.js"></script> -->
+<script src="{{ "/assets/js/uikit-icons.min.js" | relative_url }}"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/js/uikit-icons.min.js"></script> -->
+
+<script>
+    function getTabEls(){
+        return document.querySelectorAll(".uk-tab")
+    }
+
+    function adjustSelection(){
+        let selected_language = localStorage.getItem("selected_language")
+        if (!selected_language){
+            return
+        }
+        let tabs = getTabEls()
+        for (let i=0; i<tabs.length; i++) {
+            tab = tabs[i]
+            let children = tab.querySelectorAll("li")
+            for (let j=0; j<children.length; j++) {
+                let child = children[j]
+                if (child.innerText.toLowerCase() == selected_language){
+                    if (child.classList.toString().indexOf("uk-active") == -1){
+                        UIkit.tab(tab).show(j) 
+                    }
+                    break
+                }
+            }
+        }       
+    }
+
+    function attachTabListeners(){
+        let tabs = getTabEls()
+        for (let i=0; i<tabs.length; i++) {
+            tab = tabs[i]
+            tab.addEventListener('click', function(e) {
+                let selected_language = e.target.innerText.toLowerCase()
+                localStorage.setItem("selected_language", selected_language)
+                setTimeout(adjustSelection,1)
+            });
+        }
+    }
+
+    adjustSelection()
+    attachTabListeners()
+
+</script>
