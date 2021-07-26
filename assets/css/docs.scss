@@ -154,9 +154,8 @@ a {
 }
 
 .inner {
-  width: 100%;
-	max-width: $content-width;
-	padding: $base-height ($base-height * 2) ($base-height * 3) $base-height;
+	width: 100%;
+	padding: $base-height ($base-height * 2) $base-height $base-height;
 }
 
 .section {
