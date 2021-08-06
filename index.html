@@ -41,23 +41,24 @@
 			<main class="content">
 				<div class="inner">
 					<h1 id="purpose">Purpose</h1>
-<p>This is an example of a minimalistic Jekyll theme based on <a href="https://github.com/alexander-heimbuch/millidocs">millidocs</a> that integrates the <a href="https://github.com/clustergarage/jekyll-code-tabs">codetabs</a> Jekyll plugin and augments it with the following functionality:</p>
+<p>This is an example of a minimalistic Jekyll theme that integrates the <a href="https://github.com/clustergarage/jekyll-code-tabs">codetabs</a> Jekyll plugin and augments it with the following functionality:</p>
 <ul>
   <li>Change the language for all tabs on the page simultaneously</li>
   <li>Remember the last selected language in <code class="language-plaintext highlighter-rouge">localStorage</code></li>
 </ul>
 
-<p>Notes:</p>
+<p>Initally derived from <a href="https://github.com/alexander-heimbuch/millidocs">millidocs</a>, but:</p>
 <ul>
+  <li>dependencies on <a href="https://milligram.io/">milligram css</a> have been removed, because it conflicts with UIKIT (needed for tabs)</li>
   <li>Highlighter was reverted to the default (rouge) one instead of PrismJS</li>
-  <li>Search functionality has been removed</li>
+  <li>Search functionality has been removed to make things simpler</li>
 </ul>
 
 <h1 id="installation">Installation</h1>
 <p>Unzip and use the provided <code class="language-plaintext highlighter-rouge">serve.sh</code> script (requires Docker).</p>
 
 <h1 id="github-pages">Github pages</h1>
-<p>The use of a plugin makes it unsuitable for direct use with github pages. You probably need to use a build job to generate the static content in <code class="language-plaintext highlighter-rouge">_site</code> and deploy it with <a href="https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/">.nojekyll</a>.</p>
+<p>Due to the use of a custom plugin (codetabs), you cannot use the default gh-pages generator. You probably need to use a build job to generate the static content and push it to <code class="language-plaintext highlighter-rouge">gh-pages</code> branch. This is <a href="/jekyll-codetabs/github-pages.html">one way to do it</a>.</p>
 
 
 				</div>
