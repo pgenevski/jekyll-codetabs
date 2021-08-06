@@ -3,14 +3,25 @@
 
 @import 'variables';
 
-@import 'milligram';
-
 html, body {
 	margin: 0;
 	height: 100%;
 	max-height: 100%;
 	overflow: hidden;
 	min-width: $min-width;
+}
+
+table {
+	width:auto;
+	border-collapse: collapse;
+	th{
+		background-color: #f4f4f4;
+		text-align: left;
+	}
+	th, td {
+		border: 0.1rem solid #eee;
+		padding: 0.3rem;
+	}
 }
 
 * {
@@ -23,11 +34,10 @@ pre {
 
 a {
 	text-decoration: none;
-	color: inherit;
+	color: $link-color-inactive;
 
 	&:hover {
 		color: $link-color;
-		text-decoration: none;
 	}
 }
 
@@ -75,20 +85,6 @@ a {
 	}
 }
 
-.search {
-	height: $header-height;
-	border-bottom: $sidebar-border;
-	padding: 0 $base-height;
-
-	.search-input {
-		border: none;
-		font-size: 0.9em;
-		font-weight: 300;
-		width: 100%;
-		height: 100%;
-	}
-}
-
 .navigation {
 	display: block;
 	width: 100%;
@@ -124,10 +120,6 @@ a {
 	color: $content-color;
 	line-height: 1.7;
 	word-wrap: break-word;
-
-	a {
-		color: $navigation-link-color;
-	}
 
 	em {
 		color: $content-color;
