@@ -1,6 +1,7 @@
 title: ProjectX
 description: ProjectX is cool
 url: "http://localhost:4000"
+baseurl: /jekyll-codetabs/
 
 markdown: kramdown
 
