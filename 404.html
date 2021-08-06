@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ProjectX</title>
+  <meta name="description" content="ProjectX is cool">
+
+	<link rel="icon" href="/assets/images/favicon.ico">
+  <link rel="canonical" href="http://0.0.0.0:4000/404.html">
+
+	<link rel="stylesheet" href="/assets/css/uikit.min.css">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/css/uikit.min.css" /> -->
+
+
+<link rel="stylesheet" href="/assets/css/rouge-highlight-colorful.css">
+
+
+<link rel="stylesheet" href="/assets/css/docs.css">
+
+</head>
+
+	<body>
+		<div class="wrapper">
+			<sidebar class="sidebar" id="sidebar">
+	<div class="sidebar-mobile">
+		<img src="/assets/images/menu.svg" class="menu-icon" id="menu" />
+		<img src="/assets/images/close.svg" class="close-icon" id="close" />
+	</div>
+	<div class="site-title">
+		<h1>ProjectX</h1>
+	</div>
+	<div class="sidebar-main">
+		<ul class="navigation" id="navigation">													<li>				<a class="" href="/">					Overview				</a>			</li>								<li>				<a class="" href="/codetabs.html">					Code tabs				</a>			</li>								<li>				<a class="" href="/github-pages.html">					Github Pages				</a>			</li>			</ul>
+
+	</div>
+</sidebar>
+
+			<main class="content">
+				<div class="inner">
+					<h1>404</h1>
+
+<p><strong>Page not found :(</strong></p>
+<p>The requested page could not be found.</p>
+
+				</div>
+			</main>
+		</div>
+		<script src="/assets/js/uikit.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/js/uikit.min.js"></script> -->
+<script src="/assets/js/uikit-icons.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/js/uikit-icons.min.js"></script> -->
+
+<script>
+    function getTabEls(){
+        return document.querySelectorAll(".uk-tab")
+    }
+
+    function adjustSelection(){
+        let selected_language = localStorage.getItem("selected_language")
+        if (!selected_language){
+            return
+        }
+        let tabs = getTabEls()
+        for (let i=0; i<tabs.length; i++) {
+            tab = tabs[i]
+            let children = tab.querySelectorAll("li")
+            for (let j=0; j<children.length; j++) {
+                let child = children[j]
+                if (child.innerText.toLowerCase() == selected_language){
+                    if (child.classList.toString().indexOf("uk-active") == -1){
+                        UIkit.tab(tab).show(j) 
+                    }
+                    break
+                }
+            }
+        }       
+    }
+
+    function attachTabListeners(){
+        let tabs = getTabEls()
+        for (let i=0; i<tabs.length; i++) {
+            tab = tabs[i]
+            tab.addEventListener('click', function(e) {
+                let selected_language = e.target.innerText.toLowerCase()
+                localStorage.setItem("selected_language", selected_language)
+                setTimeout(adjustSelection,1)
+            });
+        }
+    }
+
+    adjustSelection()
+    attachTabListeners()
+
+</script>
+	</body>
+</html>

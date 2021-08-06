@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Code tabs</title>
+  <meta name="description" content="ProjectX is cool">
+
+	<link rel="icon" href="/assets/images/favicon.ico">
+  <link rel="canonical" href="http://0.0.0.0:4000/codetabs.html">
+
+	<link rel="stylesheet" href="/assets/css/uikit.min.css">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/css/uikit.min.css" /> -->
+
+
+<link rel="stylesheet" href="/assets/css/rouge-highlight-colorful.css">
+
+
+<link rel="stylesheet" href="/assets/css/docs.css">
+
+</head>
+
+	<body>
+		<div class="wrapper">
+			<sidebar class="sidebar" id="sidebar">
+	<div class="sidebar-mobile">
+		<img src="/assets/images/menu.svg" class="menu-icon" id="menu" />
+		<img src="/assets/images/close.svg" class="close-icon" id="close" />
+	</div>
+	<div class="site-title">
+		<h1>ProjectX</h1>
+	</div>
+	<div class="sidebar-main">
+		<ul class="navigation" id="navigation">													<li>				<a class="" href="/">					Overview				</a>			</li>								<li>				<a class="active" href="/codetabs.html">					Code tabs				</a>			</li>								<li>				<a class="" href="/github-pages.html">					Github Pages				</a>			</li>			</ul>
+
+	</div>
+</sidebar>
+
+			<main class="content">
+				<div class="inner">
+					<h1 class="no_toc" id="contents">Contents</h1>
+<ul id="markdown-toc">
+  <li><a href="#code-tabs" id="markdown-toc-code-tabs">Code tabs</a>    <ul>
+      <li><a href="#one" id="markdown-toc-one">One</a></li>
+      <li><a href="#two" id="markdown-toc-two">Two</a></li>
+    </ul>
+  </li>
+  <li><a href="#markdown" id="markdown-toc-markdown">Markdown</a>    <ul>
+      <li><a href="#h2" id="markdown-toc-h2">H2</a>        <ul>
+          <li><a href="#h3" id="markdown-toc-h3">H3</a>            <ul>
+              <li><a href="#h4" id="markdown-toc-h4">H4</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="code-tabs">Code tabs</h1>
+<p>Default highlighting works:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
+    <span class="k">pass</span>
+</code></pre></div></div>
+
+<p>But you can also add examples in several different languages:</p>
+<h2 id="one">One</h2>
+<ul class="uk-tab" data-uk-switcher="{connect:'#cdc7c2e1-3ee8-472e-882e-45d78311022d'}">
+
+	<li class="uk-active"><a href="#">Java</a></li>
+
+	<li><a href="#">Go</a></li>
+
+	<li><a href="#">Python</a></li>
+
+</ul>
+
+<ul id="cdc7c2e1-3ee8-472e-882e-45d78311022d" class="uk-switcher uk-margin">
+
+	<li>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello, world!"</span><span class="o">);</span>
+</code></pre></div></div>
+</li>
+
+	<li>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"Hello, world!"</span><span class="p">)</span>
+</code></pre></div></div>
+</li>
+
+	<li>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">param</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Hello, world!"</span><span class="p">)</span>
+</code></pre></div></div>
+</li>
+
+</ul>
+
+<h2 id="two">Two</h2>
+
+<ul class="uk-tab" data-uk-switcher="{connect:'#d132e25f-e8a9-4709-834f-970a5db50419'}">
+
+	<li class="uk-active"><a href="#">Java</a></li>
+
+	<li><a href="#">Go</a></li>
+
+	<li><a href="#">Python</a></li>
+
+</ul>
+
+<ul id="d132e25f-e8a9-4709-834f-970a5db50419" class="uk-switcher uk-margin">
+
+	<li>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello, world!"</span><span class="o">);</span>
+</code></pre></div></div>
+</li>
+
+	<li>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"Hello, world!"</span><span class="p">)</span>
+</code></pre></div></div>
+</li>
+
+	<li>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">param</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Hello, world!"</span><span class="p">)</span>
+</code></pre></div></div>
+</li>
+
+</ul>
+
+<p>And then when you select the language in one of the tabs, it is automatically selected in the other. Also, the selected language is remembered in <code class="language-plaintext highlighter-rouge">localStorage</code>, so that it works between pages and page refreshes.</p>
+
+<h1 id="markdown">Markdown</h1>
+<p>All the rest of the markdown features shall work fine too.</p>
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h4 id="h4">H4</h4>
+<p>This is a sample text with <code class="language-plaintext highlighter-rouge">quote</code> and other <em>italic</em> and <strong>bold</strong> text.</p>
+
+<ul>
+  <li>one
+    <ul>
+      <li>one</li>
+    </ul>
+  </li>
+  <li>two</li>
+</ul>
+
+<ol>
+  <li>One</li>
+  <li>Two</li>
+</ol>
+
+<blockquote>
+  <p>Blockquote</p>
+</blockquote>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />@mentions, #refs, <a href="">links</a>, <strong>formatting</strong>, and <del>tags</del> supported</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />list syntax required (any unordered or ordered list supported)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />this is a complete item</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />this is an incomplete item</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>First Header</th>
+      <th>Second Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content from cell 1</td>
+      <td>Content from cell 2</td>
+    </tr>
+    <tr>
+      <td>Content in the first column</td>
+      <td>Content in the second column</td>
+    </tr>
+  </tbody>
+</table>
+
+
+				</div>
+			</main>
+		</div>
+		<script src="/assets/js/uikit.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/js/uikit.min.js"></script> -->
+<script src="/assets/js/uikit-icons.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/js/uikit-icons.min.js"></script> -->
+
+<script>
+    function getTabEls(){
+        return document.querySelectorAll(".uk-tab")
+    }
+
+    function adjustSelection(){
+        let selected_language = localStorage.getItem("selected_language")
+        if (!selected_language){
+            return
+        }
+        let tabs = getTabEls()
+        for (let i=0; i<tabs.length; i++) {
+            tab = tabs[i]
+            let children = tab.querySelectorAll("li")
+            for (let j=0; j<children.length; j++) {
+                let child = children[j]
+                if (child.innerText.toLowerCase() == selected_language){
+                    if (child.classList.toString().indexOf("uk-active") == -1){
+                        UIkit.tab(tab).show(j) 
+                    }
+                    break
+                }
+            }
+        }       
+    }
+
+    function attachTabListeners(){
+        let tabs = getTabEls()
+        for (let i=0; i<tabs.length; i++) {
+            tab = tabs[i]
+            tab.addEventListener('click', function(e) {
+                let selected_language = e.target.innerText.toLowerCase()
+                localStorage.setItem("selected_language", selected_language)
+                setTimeout(adjustSelection,1)
+            });
+        }
+    }
+
+    adjustSelection()
+    attachTabListeners()
+
+</script>
+	</body>
+</html>
