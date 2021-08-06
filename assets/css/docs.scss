@@ -28,6 +28,13 @@ table {
 	box-sizing: border-box;
 }
 
+blockquote {
+	border-left: 0.5rem solid;
+	padding-left: 0.5rem;
+	border-color: $blockquote-color;
+	font-size: 0.9rem;
+}
+
 pre {
 	margin-bottom: ($base-height * 2) !important;
 }
